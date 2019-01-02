@@ -1,0 +1,52 @@
+body {
+    background: url('background_seam.gif');
+}
+
+.onlineChecker{
+
+}
+
+.wrapper{
+    font-size: 32px;
+    height: 40px;
+    margin-top:10px;
+}
+.wrapper:first-child{
+    //margin-top: 100px;
+    margin-top: 0;
+}
+
+.name{
+    display: inline-block;
+    border-radius: 10px 0 0 10px;
+    border: 3px solid rebeccapurple;
+
+    border-right: none;
+    padding-left: 10px;
+    height: 40px;
+    width: 400px;
+
+    background-color: #eee;
+}
+
+.status{
+    display: inline-block;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid rebeccapurple;
+
+    padding-left: 10px;
+    height: 44px;
+    width: 100px;
+
+    color: #eee;
+
+    transform:translateY(-2px);
+}
+
+.online{
+    background-color: darkgreen;
+}
+
+.offline{
+    background-color: darkred;
+}
