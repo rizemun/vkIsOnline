@@ -50,3 +50,8 @@ body {
 .offline{
     background-color: darkred;
 }
+
+
+#player{
+    display: none;
+}

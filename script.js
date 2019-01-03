@@ -8,7 +8,6 @@ let User = function(firstName, lastName, id){
             return;
         }
 
-
         let statusElements = document.querySelectorAll(".onlineChecker .status");
         let i = users.findIndex(elem => elem.id===this.id);
         let statusElem = statusElements[i];
@@ -19,6 +18,12 @@ let User = function(firstName, lastName, id){
             statusElem.innerHTML = "Online";
             statusElem.classList.add("online");
             statusElem.classList.remove("offline");
+
+            audioPlayer.play();
+
+
+
+
         }
         else {
             statusElem.innerHTML = "Offline";
@@ -28,6 +33,8 @@ let User = function(firstName, lastName, id){
         this.isOnline = isOnline
     }
 };
+
+let audioPlayer ={};
 
 let users = [];
 Array.prototype.generateHTML = function(){
@@ -70,6 +77,14 @@ window.onload = function(){
     users.push(new User("Артем", "Маркин", 80714496));
 
     document.body.appendChild(users.generateHTML());
+
+    audioPlayer.elem = document.getElementById("player");
+    audioPlayer.play = function(){
+        console.dir(this.elem);
+        this.elem.play();
+    };
+
+
 
     a();
 };
