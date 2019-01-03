@@ -20,7 +20,7 @@ let User = function(firstName, lastName, id){
             statusElem.classList.remove("offline");
 
             audioPlayer.play();
-
+            console.log("played");
 
 
 
@@ -34,7 +34,7 @@ let User = function(firstName, lastName, id){
     }
 };
 
-let audioPlayer ={};
+let audioPlayer;
 
 let users = [];
 Array.prototype.generateHTML = function(){
@@ -78,12 +78,15 @@ window.onload = function(){
 
     document.body.appendChild(users.generateHTML());
 
-    audioPlayer.elem = document.getElementById("player");
-    audioPlayer.play = function(){
-        console.dir(this.elem);
-        this.elem.play();
-    };
+    audioPlayer = document.getElementById("player");
 
+/*
+
+    setTimeout(function(){
+        users[0].refresh(true);
+
+    },5000)
+*/
 
 
     a();
@@ -107,7 +110,5 @@ function a(){
         nextFunc();
     }, 5000);
 }
-
-
 
 
