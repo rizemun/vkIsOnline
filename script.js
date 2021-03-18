@@ -72,7 +72,7 @@ window.onload = function(){
 
 
 
-
+    users.push(new User("Настя", "Каргина", 71951741));
     users.push(new User("Артем", "Маркин", 80714496));
 
     document.body.appendChild(users.generateHTML());
